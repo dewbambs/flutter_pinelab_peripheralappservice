@@ -26,4 +26,8 @@ abstract class FlutterPinelabPeripheralappservicePlatform extends PlatformInterf
   Future<String?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
+
+   Future<String?> sendRequest({required String request}) {
+    throw UnimplementedError('sendRequest() has not been implemented.');
+  }
 }

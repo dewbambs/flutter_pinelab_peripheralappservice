@@ -10,6 +10,12 @@ class MockFlutterPinelabPeripheralappservicePlatform
 
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
+  
+  @override
+  Future<String?> sendRequest({required String request}) {
+    // TODO: implement sendRequest
+    throw UnimplementedError();
+  }
 }
 
 void main() {
