@@ -34,7 +34,6 @@ class _MyAppState extends State<MyApp> {
     final response =
         await _flutterPinelabPeripheralappservicePlugin.startScan();
 
-
     /// provides ResponseModel in return which contains the response from the pinelabs device.
     setState(() {
       _responseMessage = (response ?? 'NO RESPONSE').toString();
