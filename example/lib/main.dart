@@ -34,9 +34,10 @@ class _MyAppState extends State<MyApp> {
     final response =
         await _flutterPinelabPeripheralappservicePlugin.startScan();
 
+
     /// provides ResponseModel in return which contains the response from the pinelabs device.
     setState(() {
-      _responseMessage = (response?.responseMsg ?? '').toString();
+      _responseMessage = (response ?? 'NO RESPONSE').toString();
     });
   }
 
@@ -85,7 +86,7 @@ class _MyAppState extends State<MyApp> {
                   child: const Text('Start Scan'),
                   onPressed: () async {
                     _responseMessage = '';
-                    await _startScan();
+                    _startScan();
                   },
                 ),
                 const SizedBox(width: 20),

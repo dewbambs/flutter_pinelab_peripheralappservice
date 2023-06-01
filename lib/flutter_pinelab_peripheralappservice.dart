@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter_pinelab_peripheralappservice/model/response_model.dart';
 
 import 'flutter_pinelab_peripheralappservice_platform_interface.dart';
@@ -11,10 +13,13 @@ class FlutterPinelabPeripheralappservice {
   Future<ResponseModel?> startScan() async {
     final response =
         await FlutterPinelabPeripheralappservicePlatform.instance.sendRequest(
-      request: {
-        'OperationType': 3004,
-      }.toString(),
+      request: json.encode(
+        {
+          'OperationType': 3004,
+        },
+      ),
     );
+    print(response.toString());
 
     return response != null ? ResponseModel.fromJson(response) : null;
   }

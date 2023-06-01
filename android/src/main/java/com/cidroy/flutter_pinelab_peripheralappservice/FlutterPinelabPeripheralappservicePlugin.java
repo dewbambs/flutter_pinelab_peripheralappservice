@@ -1,15 +1,29 @@
 package com.cidroy.flutter_pinelab_peripheralappservice;
 
+import static android.content.Context.BIND_AUTO_CREATE;
+
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.IBinder;
+import android.os.Message;
+import android.os.Messenger;
+import android.os.RemoteException;
+
 import androidx.annotation.NonNull;
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.embedding.engine.plugins.activity.ActivityAware;
+import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 
 /** FlutterPinelabPeripheralappservicePlugin */
-public class FlutterPinelabPeripheralappservicePlugin implements FlutterPlugin, MethodCallHandler {
+public class FlutterPinelabPeripheralappservicePlugin implements FlutterPlugin, MethodCallHandler,ActivityAware {
   /// The MethodChannel that will the communication between Flutter and native Android
   ///
   /// This local reference serves to register the plugin with the Flutter Engine and unregister it
