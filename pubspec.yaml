@@ -1,7 +1,8 @@
 name: flutter_pinelab_peripheralappservice
-description: A new Flutter plugin project.
+description: pinelab flutter extension package for background pinelab process.
 version: 0.0.1
-homepage:
+homepage: http://cidroy.com/
+repository: https://github.com/dewbambs/flutter_pinelab_peripheralappservice
 
 environment:
   sdk: '>=3.0.0 <4.0.0'

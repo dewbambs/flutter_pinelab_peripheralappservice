@@ -19,7 +19,6 @@ class FlutterPinelabPeripheralappservice {
         },
       ),
     );
-    print(response.toString());
 
     return response != null ? ResponseModel.fromJson(response) : null;
   }
