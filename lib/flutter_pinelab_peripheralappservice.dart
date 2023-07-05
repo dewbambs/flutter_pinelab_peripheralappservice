@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:flutter_pinelab_peripheralappservice/model/response_model.dart';
+import 'package:flutter_pinelab_peripheralappservice/model/scan_response_model.dart';
 
 import 'flutter_pinelab_peripheralappservice_platform_interface.dart';
 
@@ -10,7 +10,7 @@ class FlutterPinelabPeripheralappservice {
         .getPlatformVersion();
   }
 
-  Future<ResponseModel?> startScan() async {
+  Future<ScanResponseModel?> startScan() async {
     final response =
         await FlutterPinelabPeripheralappservicePlatform.instance.sendRequest(
       request: json.encode(
@@ -20,6 +20,6 @@ class FlutterPinelabPeripheralappservice {
       ),
     );
 
-    return response != null ? ResponseModel.fromJson(response) : null;
+    return response != null ? ScanResponseModel.fromJson(response) : null;
   }
 }

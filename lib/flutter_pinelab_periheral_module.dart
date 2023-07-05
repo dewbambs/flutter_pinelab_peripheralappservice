@@ -1,2 +1,2 @@
 export 'flutter_pinelab_peripheralappservice.dart';
-export 'model/response_model.dart';
+export 'model/scan_response_model.dart';
