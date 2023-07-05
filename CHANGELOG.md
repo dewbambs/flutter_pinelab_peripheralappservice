@@ -1,3 +1,7 @@
+## 0.1.0
+
+* Bug fixes.
+
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Included peripheral device connection.
