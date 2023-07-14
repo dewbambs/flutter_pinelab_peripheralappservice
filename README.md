@@ -11,7 +11,7 @@ As stated by pinelabs.
 > This API should be called when the scanner needs to be turned on and listened to indefinitely. Although the pinelabs devices needs to be connected to charing base via bluetooth connection, via functions provided by the Master application of the pinelabs device.
 
 On successful scan this api returns a json response as :
-{
+>{
     "OperationType": 3004,
     "ResponseCode" : 10,
     "ResponseMessage" : "Data Scanned Success",
@@ -27,7 +27,7 @@ NOTE:
 The Scanner must be turned off when done, to avoid interruptions in other methods.
 
 On success this api returns a json response as :
-{
+>{
     "OperationType": 3007,
     "ResponseCode" : 12,
     "ResponseMessage" : "Scanner is Reset!!",
@@ -36,4 +36,6 @@ On success this api returns a json response as :
 
 ## Developed by:
 
-![Mask type](https://wsrv.nl/?url=wsrv.nl/lichtenstein.jpg&w=200&h=200&fit=cover&mask=circle)
+![Mask type](https://wsrv.nl/?url=/assets/profilePic.jpg&w=200&h=200&fit=cover&mask=circle)
+
+Yash Vardhan
