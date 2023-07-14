@@ -95,6 +95,9 @@ public class FlutterPinelabPeripheralappservicePlugin implements FlutterPlugin, 
     } else if (call.method.equals("startScan")) {
       peripheralMethodCall(call.argument("request"));
       channelResult = result;
+    } else if (call.method.equals("stopScan")) {
+      peripheralMethodCall(call.argument("request"));
+      channelResult = result;
     } else {
       result.notImplemented();
     }

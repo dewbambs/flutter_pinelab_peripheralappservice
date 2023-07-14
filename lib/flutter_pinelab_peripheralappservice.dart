@@ -13,9 +13,24 @@ class FlutterPinelabPeripheralappservice {
   Future<ScanResponseModel?> startScan() async {
     final response =
         await FlutterPinelabPeripheralappservicePlatform.instance.sendRequest(
+      methodName: 'startScan',
       request: json.encode(
         {
           'OperationType': 3004,
+        },
+      ),
+    );
+
+    return response != null ? ScanResponseModel.fromJson(response) : null;
+  }
+
+  Future<ScanResponseModel?> stopScan() async {
+    final response =
+        await FlutterPinelabPeripheralappservicePlatform.instance.sendRequest(
+      methodName: 'stopScan',
+      request: json.encode(
+        {
+          'OperationType': 3007,
         },
       ),
     );

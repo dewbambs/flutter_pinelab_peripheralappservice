@@ -19,9 +19,9 @@ class MethodChannelFlutterPinelabPeripheralappservice
   }
 
   @override
-  Future<String?> sendRequest({required String request}) async {
+  Future<String?> sendRequest({required String request,required String methodName}) async {
     final result = await methodChannel.invokeMethod<String>(
-      'startScan',
+      methodName,
       {
         'request': request,
       },

@@ -40,6 +40,19 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  Future<void> _stopScan() async {
+    /// do transaction for pinelabs device.
+    /// calls the pinelab device with the header provided in the constructor.
+    /// one can override the contructor using [overrideHeader] parameter.
+    final response = await _flutterPinelabPeripheralappservicePlugin.stopScan();
+
+    /// provides ResponseModel in return which contains the response from the pinelabs device.
+    setState(() {
+      _responseMessage =
+          (response ?? 'Stop Scan Called - No Response').toString();
+    });
+  }
+
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
     String platformVersion;
@@ -86,6 +99,14 @@ class _MyAppState extends State<MyApp> {
                   onPressed: () async {
                     _responseMessage = '';
                     _startScan();
+                  },
+                ),
+                const SizedBox(width: 20),
+                ElevatedButton(//
+                  child: const Text('Stop Scan'),
+                  onPressed: () async {
+                    _responseMessage = '';
+                    _stopScan();
                   },
                 ),
                 const SizedBox(width: 20),
