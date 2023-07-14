@@ -36,6 +36,6 @@ On success this api returns a json response as :
 
 ## Developed by:
 
-![Mask type](https://wsrv.nl/?url=/assets/profilePic.jpg&w=200&h=200&fit=cover&mask=circle)
+![Mask type](https://wsrv.nl/?url=https://github.com/dewbambs/flutter_pinelab_peripheralappservice/assets/97099753/63b172ce-8bec-44c2-981c-55dab7389ecb&w=100&h=100&fit=cover&mask=circle)
 
 Yash Vardhan
